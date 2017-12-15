@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bwy-nQ-QR6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bwy-nQ-QR6">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,12 +18,56 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="SCd-w1-CnR"/>
+                        <segue destination="ejO-wq-cfE" kind="relationship" relationship="rootViewController" id="oEr-x6-1VI"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4n1-Ob-Opy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-727" y="33"/>
+            <point key="canvasLocation" x="-1174" y="33"/>
+        </scene>
+        <!--Top View Controller-->
+        <scene sceneID="AOh-fT-TB8">
+            <objects>
+                <viewController id="ejO-wq-cfE" customClass="TopViewController" customModule="WKWebViewProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="R5N-Ei-4tl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4zX-sp-Zuj">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell" id="1O9-Mb-s2O">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1O9-Mb-s2O" id="ZHv-sR-9AS">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="4zX-sp-Zuj" firstAttribute="leading" secondItem="0wY-IU-1ex" secondAttribute="leading" id="4v8-AY-IDf"/>
+                            <constraint firstItem="4zX-sp-Zuj" firstAttribute="top" secondItem="0wY-IU-1ex" secondAttribute="top" id="CSU-qX-1hU"/>
+                            <constraint firstAttribute="trailing" secondItem="4zX-sp-Zuj" secondAttribute="trailing" id="fg7-3t-RIm"/>
+                            <constraint firstItem="0wY-IU-1ex" firstAttribute="bottom" secondItem="4zX-sp-Zuj" secondAttribute="bottom" id="lY4-jq-KGC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0wY-IU-1ex"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="mId-Mc-5YC"/>
+                    <connections>
+                        <outlet property="topLayoutConstraint" destination="CSU-qX-1hU" id="kg7-48-HOm"/>
+                        <outlet property="topTableView" destination="4zX-sp-Zuj" id="r7j-hr-pRf"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="normalKVOSegue" id="e9E-Xa-Rx2"/>
+                        <segue destination="Uk9-aI-4Z6" kind="show" identifier="newKVOAPISegue" id="Spj-df-xxJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUh-gg-fqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-476" y="33"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -59,6 +103,42 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="401" y="33"/>
+        </scene>
+        <!--NewKVOAPI View Controller-->
+        <scene sceneID="GNj-Ky-nbT">
+            <objects>
+                <viewController id="Uk9-aI-4Z6" customClass="NewKVOAPIViewController" customModule="WKWebViewProgress" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cbu-ae-8Db">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pIw-oT-Fsa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pIw-oT-Fsa" firstAttribute="top" secondItem="v4s-ac-3gW" secondAttribute="top" id="0Y7-eu-BjB"/>
+                            <constraint firstItem="v4s-ac-3gW" firstAttribute="bottom" secondItem="pIw-oT-Fsa" secondAttribute="bottom" id="YMD-dQ-HAA"/>
+                            <constraint firstItem="pIw-oT-Fsa" firstAttribute="leading" secondItem="v4s-ac-3gW" secondAttribute="leading" id="f7c-pD-ujb"/>
+                            <constraint firstItem="v4s-ac-3gW" firstAttribute="trailing" secondItem="pIw-oT-Fsa" secondAttribute="trailing" id="lxQ-rN-XbA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="v4s-ac-3gW"/>
+                    </view>
+                    <connections>
+                        <outlet property="topLayoutConstraint" destination="0Y7-eu-BjB" id="v99-RI-cIY"/>
+                        <outlet property="wkWebView" destination="pIw-oT-Fsa" id="5NM-T6-bE7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a1l-ce-AEc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="401" y="801"/>
         </scene>
     </scenes>
 </document>

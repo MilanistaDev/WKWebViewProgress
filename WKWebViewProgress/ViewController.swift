@@ -42,6 +42,9 @@ class ViewController: UIViewController {
     }
 
     deinit {
+        self.wkWebView.navigationDelegate = nil
+        self.wkWebView.uiDelegate = nil
+        self.progressView.alpha = 0.0
         self.wkWebView.removeObserver(self, forKeyPath: "estimatedProgress", context: nil)
     }
 

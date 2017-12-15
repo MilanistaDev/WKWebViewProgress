@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		197A686A1FE3DEEC0044F8F6 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197A68691FE3DEEC0044F8F6 /* TopViewController.swift */; };
+		197A686C1FE3E3240044F8F6 /* NewKVOAPIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 197A686B1FE3E3240044F8F6 /* NewKVOAPIViewController.swift */; };
 		19F904071F95FB3E00349982 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F904061F95FB3E00349982 /* AppDelegate.swift */; };
 		19F904091F95FB3F00349982 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19F904081F95FB3F00349982 /* ViewController.swift */; };
 		19F9040C1F95FB3F00349982 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19F9040A1F95FB3F00349982 /* Main.storyboard */; };
@@ -15,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		197A68691FE3DEEC0044F8F6 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopViewController.swift; sourceTree = "<group>"; };
+		197A686B1FE3E3240044F8F6 /* NewKVOAPIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewKVOAPIViewController.swift; sourceTree = "<group>"; };
 		19F904031F95FB3E00349982 /* WKWebViewProgress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WKWebViewProgress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19F904061F95FB3E00349982 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19F904081F95FB3F00349982 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				19F904061F95FB3E00349982 /* AppDelegate.swift */,
+				197A68691FE3DEEC0044F8F6 /* TopViewController.swift */,
 				19F904081F95FB3F00349982 /* ViewController.swift */,
+				197A686B1FE3E3240044F8F6 /* NewKVOAPIViewController.swift */,
 				19F9040A1F95FB3F00349982 /* Main.storyboard */,
 				19F9040D1F95FB3F00349982 /* Assets.xcassets */,
 				19F9040F1F95FB3F00349982 /* LaunchScreen.storyboard */,
@@ -136,8 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				197A686A1FE3DEEC0044F8F6 /* TopViewController.swift in Sources */,
 				19F904091F95FB3F00349982 /* ViewController.swift in Sources */,
 				19F904071F95FB3E00349982 /* AppDelegate.swift in Sources */,
+				197A686C1FE3E3240044F8F6 /* NewKVOAPIViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
